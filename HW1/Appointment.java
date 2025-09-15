@@ -3,14 +3,12 @@ package HW1;
 import java.time.LocalDate;
 abstract class Appointment{
     private String description;
-    private String name;
     private LocalDate date;
-    private LocalDate created;
-    private int appointmentID;
 
     public Appointment(String desc, LocalDate d){
         this.description = desc;
         this.date = d;
+        //think about using exception handling to validate the date
     }
 
     public String getDescription(){

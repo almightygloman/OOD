@@ -7,7 +7,8 @@ public class Daily extends Appointment {
 
     @Override
     public boolean occursOn(int year, int month, int day) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        LocalDate temp = LocalDate.of(year, month, day);
+        return getDate().isBefore(temp);
     }
 
 }
