@@ -2,7 +2,7 @@ package HW1;
 
 import java.time.LocalDate;
 
-public class Monthly extends Appointment{
+class Monthly extends Appointment{
 
     public Monthly(String desc, LocalDate d) {
         super(desc, d);

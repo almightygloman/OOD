@@ -2,7 +2,7 @@ package HW1;
 
 import java.time.LocalDate;
 
-public class Onetime extends Appointment{
+class Onetime extends Appointment{
 
     public Onetime(String desc, LocalDate d) {
         super(desc, d);
@@ -13,6 +13,4 @@ public class Onetime extends Appointment{
         LocalDate temp = LocalDate.of(year,month,day);
         return getDate().equals(temp);
     }
-    
-    
 }

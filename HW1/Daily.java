@@ -1,6 +1,6 @@
 package HW1;
 import java.time.LocalDate;
-public class Daily extends Appointment {
+class Daily extends Appointment {
     public Daily(String desc, LocalDate d){
         super(desc, d);
     }
