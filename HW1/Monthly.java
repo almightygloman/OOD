@@ -12,8 +12,9 @@ class Monthly extends Appointment{
     public boolean occursOn(int year, int month, int day) {
         LocalDate temp = LocalDate.of(year, month, day);
         LocalDate apDate = getDate();
+
         //make sure the date we are checking is after/on the appointment date
-        if(temp.isBefore(getDate())) return false;
+        if(temp.isBefore(apDate) || temp.isAfter(apDate.plusMonths(6))) return false;
         //check if the days are the last of the month if the DOTM aren't equal
         return temp.getDayOfMonth() == apDate.getDayOfMonth() || isLastDay(apDate) == isLastDay(temp);
     }

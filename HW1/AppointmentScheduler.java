@@ -10,10 +10,11 @@ class AppointmentScheduler {
     }
     //allow adding to private list
     public void addAppointment(Appointment apt){
+        if (apt == null) throw new IllegalArgumentException("Appointment cannot be null");
         appointments.add(apt);
     }
 
-    //return list of appointments on same date
+    //return list of appointments which occur on a given date
     public List<Appointment> getMatches(int year, int month, int day){
         List<Appointment>matches = new LinkedList<>();
         for(Appointment apt:appointments){
